@@ -1,4 +1,12 @@
 /**
+ * Tailwind CSS imports
+ * View the full documentation at https://tailwindcss.com
+ */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/**
  * WHAT IS THIS FILE?
  *
  * Globally applied styles. No matter which components are in the page or matching route,
@@ -6,15 +14,33 @@
  *
  */
 
-:root {
-  --qwik-dark-blue: #006ce9;
-  --qwik-light-blue: #18b6f6;
-  --qwik-light-purple: #ac7ff4;
-  --qwik-dark-purple: #713fc2;
-  --qwik-dirty-black: #1d2033;
-  --qwik-dark-background: #151934;
-  --qwik-dark-text: #ffffff;
+/* Custom variables for themes */
+[data-theme="DARK_THEME"] {
+  --background-content: #101010;
+  --background-footer: #020e08;
+  --text-color-pr: #f3f5f7;
+
+
+  --border-v1: #e0e0e0;
+  --border-v2: #e0e0e080;
 }
+
+/* 212a3e */
+[data-theme="LIGHT_THEME"] {
+  --background-content: #f3f5f7;
+  --background-footer: #bcbbbb;
+  --text-color-pr: #191919;
+
+  --border-v1: #e5e5e5;
+  --border-v2: #e5e5e5;
+
+}
+
+:root {
+
+  --max-width-content: 1400px;
+}
+
 
 html {
   line-height: 1;

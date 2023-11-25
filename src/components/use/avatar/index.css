@@ -1,0 +1,32 @@
+.container-avatar img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid #d0d7de !important;
+    background-color: var(--color-background-down);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    object-fit: cover;
+    font-size: 20px;
+}
+
+.small img {
+    width: 35px;
+    height: 35px;
+}
+
+.medium img {
+    width: 50px;
+    height: 50px;
+}
+
+.medium_large img {
+    width: 100px;
+    height: 100px;
+}
+
+.large img {
+    width: 150px;
+    height: 150px;
+}

@@ -1,4 +1,4 @@
-import { component$ } from "@builder.io/qwik";
+import { component$, useContextProvider, useStore } from "@builder.io/qwik";
 import {
   QwikCityProvider,
   RouterOutlet,
@@ -7,15 +7,15 @@ import {
 import { RouterHead } from "./components/router-head/router-head";
 
 import "./global.css";
+import { GlobalTheme, type SiteTheme } from "./context/theme.context";
+import { ThemeLoader } from "./components/theme-select/theme-loader";
 
 export default component$(() => {
-  /**
-   * The root of a QwikCity site always start with the <QwikCityProvider> component,
-   * immediately followed by the document's <head> and <body>.
-   *
-   * Don't remove the `<head>` and `<body>` elements.
-   */
+  const store = useStore<SiteTheme>({
+    theme: "LIGHT_THEME",
+  });
 
+  useContextProvider(GlobalTheme, store);
   return (
     <QwikCityProvider>
       <head>
@@ -25,6 +25,7 @@ export default component$(() => {
         <ServiceWorkerRegister />
       </head>
       <body lang="en">
+        <ThemeLoader />
         <RouterOutlet />
       </body>
     </QwikCityProvider>
