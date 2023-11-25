@@ -18,12 +18,12 @@ export default component$(() => {
       </div>
       <ul>
         <li>
-          <a href="/">
+          <a href="/" class={url.pathname === "/" && "active"}>
             <IconHomeInit size={25} /> Inicio
           </a>
         </li>
         <li>
-          <a href="/">
+          <a href="/today" class={url.pathname === "/today/" && "active"}>
             <IconToday size={18} /> Hoy
           </a>
         </li>
