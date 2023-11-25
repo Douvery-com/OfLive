@@ -49,7 +49,7 @@ export default component$(() => {
         </li>
       </ul>
       <ul>
-        <li>
+        <li class="select_teme">
           Selecion de tema <ThemeSelect />
         </li>
       </ul>

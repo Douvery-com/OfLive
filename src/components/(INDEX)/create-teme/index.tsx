@@ -19,7 +19,7 @@ export const IndexCreateTeme = component$(() => {
           type="text"
           name="teme"
           id="teme"
-          placeholder="Hablar sobre algo"
+          placeholder="Comenta, pregunta o comparte algo"
           class="input-teme"
         />
         <button disabled class="btn-teme">

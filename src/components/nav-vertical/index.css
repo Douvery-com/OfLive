@@ -44,3 +44,12 @@ nav ul li a svg {
     width: 50px;
 
 }
+
+nav ul li a:hover {
+    width: 100%;
+    transform: scale(0.9);
+}
+
+.select_teme {
+    color: var(--text-color-pr);
+}

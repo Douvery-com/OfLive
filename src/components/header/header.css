@@ -4,6 +4,7 @@ nav {
     max-width: var(--max-width-content);
     height: 90px;
     display: flex;
+    padding: 0 30px;
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid var(--border-v1);
@@ -37,4 +38,13 @@ nav ul li a {
     display: flex;
     align-items: center;
     gap: 5px;
+}
+
+a {
+    color: var(--text-color-pr);
+}
+
+nav ul li a:hover {
+    width: 100%;
+    transform: scale(1.3);
 }

@@ -16,7 +16,7 @@
 
 /* Custom variables for themes */
 [data-theme="DARK_THEME"] {
-  --background-content: #101010;
+  --background-content: #000000;
   --background-footer: #020e08;
   --text-color-pr: #f3f5f7;
 
@@ -38,7 +38,7 @@
 
 :root {
 
-  --max-width-content: 1400px;
+  --max-width-content: 1350px;
 }
 
 
