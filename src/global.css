@@ -16,13 +16,17 @@
 
 /* Custom variables for themes */
 [data-theme="DARK_THEME"] {
-  --background-content: #000000;
+  --background-content: #070a0c;
+  --background-clear: #0e1418;
   --background-footer: #020e08;
   --text-color-pr: #f3f5f7;
 
+  --color-action-v1: #f3f5f7;
 
-  --border-v1: #e0e0e0;
+
+  --border-v1: #9f9f9f74;
   --border-v2: #e0e0e080;
+  --border-v3: #e0e0e080;
 }
 
 /* 212a3e */
@@ -30,6 +34,10 @@
   --background-content: #fff;
   --background-clear: #f3f5f7;
   --background-footer: #bcbbbb;
+
+  --color-action-v1: #1f2937;
+
+
   --text-color-pr: #191919;
 
   --border-v1: #e5e5e5;

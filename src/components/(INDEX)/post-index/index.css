@@ -1,4 +1,6 @@
-section {}
+section strong {
+    color: var(--text-color-pr);
+}
 
 ul {
     display: flex;

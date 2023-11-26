@@ -7,6 +7,7 @@ export default component$(() => {
   useStylesScoped$(style);
   return (
     <section>
+      <br />
       <IndexCreateTeme />
       <PostIndex />
     </section>

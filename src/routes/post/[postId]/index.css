@@ -1,16 +1,13 @@
-.section_action_buttons {
+.section_header_post {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     gap: 20px;
-
+    padding: 10px 0;
+    margin: 0px 0;
 }
 
-.section_action_buttons .action_primary {
-    display: flex;
-    gap: 20px;
-}
-
-.section_action_buttons button {
+.button_go_back {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -24,14 +21,9 @@
     outline: none;
     cursor: pointer;
     transition: all 0.3s ease;
+
 }
 
-.section_action_buttons button span:hover {
-    text-decoration: underline;
-}
-
-.shared_button {
-    position: absolute;
-    top: 20px;
-    right: 20px;
+.button_go_back:hover {
+    transform: scale(1.1);
 }

@@ -1,10 +1,12 @@
-import { component$, Slot, useStyles$ } from "@builder.io/qwik";
+import { $, component$, Slot, useStyles$ } from "@builder.io/qwik";
 import { routeLoader$ } from "@builder.io/qwik-city";
 import type { RequestHandler } from "@builder.io/qwik-city";
 
 import styles from "./styles.css?inline";
 import Header from "~/components/header/header";
 import NavVertical from "~/components/nav-vertical";
+import { type ImageTransformerProps, useImageProvider } from "qwik-image";
+import { modifyCloudinaryUrl } from "~/core/utils/modify-cloudinary-url";
 
 export const onGet: RequestHandler = async ({ cacheControl }) => {
   // Control caching for this request for best performance and to reduce hosting costs:
@@ -25,6 +27,21 @@ export const useServerTimeLoader = routeLoader$(() => {
 
 export default component$(() => {
   useStyles$(styles);
+  const imageTransformer$ = $(
+    ({ src, width }: ImageTransformerProps): string => {
+      // Ejemplo de uso
+      const originalUrl = src;
+      const newSegment = `q_auto,f_auto,w_${width}`;
+      const modifiedUrl = modifyCloudinaryUrl(originalUrl, newSegment);
+
+      return modifiedUrl;
+    },
+  );
+
+  useImageProvider({
+    resolutions: [550],
+    imageTransformer$,
+  });
   return (
     <main id="content">
       <div class="header">
@@ -37,6 +54,7 @@ export default component$(() => {
         <div class="slot">
           <Slot />
         </div>
+        <article></article>
       </div>
     </main>
   );

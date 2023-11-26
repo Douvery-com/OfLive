@@ -16,6 +16,7 @@ export default component$(() => {
   });
 
   useContextProvider(GlobalTheme, store);
+
   return (
     <QwikCityProvider>
       <head>

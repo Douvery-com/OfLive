@@ -1,10 +1,18 @@
-import { component$, useStylesScoped$ } from "@builder.io/qwik";
+import { $, component$, useStore, useStylesScoped$ } from "@builder.io/qwik";
 import { UserAvatar } from "~/components/use/avatar";
 import { AvatarSizes } from "~/core/enum/sizes.enum";
 
 import style from "./index.css?inline";
 export const IndexCreateTeme = component$(() => {
   useStylesScoped$(style);
+  const statepost = useStore({
+    content: "",
+  });
+
+  const handleChangeContet = $(async (e: any) => {
+    statepost.content = (e.target as HTMLInputElement).value;
+  });
+
   return (
     <section class="section_create_teme">
       <div class="profile">
@@ -21,8 +29,13 @@ export const IndexCreateTeme = component$(() => {
           id="teme"
           placeholder="Comenta, pregunta o comparte algo"
           class="input-teme"
+          value={statepost.content}
+          onKeyUp$={handleChangeContet}
         />
-        <button disabled class="btn-teme">
+        <button
+          disabled={statepost.content === "" ? true : false}
+          class="btn-teme"
+        >
           Publicar
         </button>
       </div>

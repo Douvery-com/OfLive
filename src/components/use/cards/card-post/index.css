@@ -5,10 +5,10 @@ section {
     width: 100%;
     padding: 1.5rem 1rem;
     cursor: pointer;
-    transition: all 0.3s ease;
     background-color: var(--background-content);
     color: var(--text-color-pr);
-    ;
+    border-top: 1px solid var(--border-v1);
+    border-bottom: 1px solid var(--border-v1);
 }
 
 section .profile {
@@ -79,4 +79,19 @@ section .card_info .card_info_user span {
 
 .show_more:hover {
     text-decoration: underline;
+}
+
+.section_image {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    gap: 1rem;
+}
+
+.section_image .img {
+    width: 100%;
 }

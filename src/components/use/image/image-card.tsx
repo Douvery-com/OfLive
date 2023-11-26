@@ -16,7 +16,7 @@ export const ImageCard = component$(
     layout: LayoutOptions;
     objectFit: ObjectFitOptions;
     width: number;
-    height: number;
+    height?: number;
     isclass: string;
     priority?: boolean;
     src: string;
@@ -34,6 +34,9 @@ export const ImageCard = component$(
           src={src}
           alt={alt}
           placeholder={background}
+          style={{
+            borderRadius: "10px",
+          }}
         />
       </>
     );
