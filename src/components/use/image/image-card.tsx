@@ -36,6 +36,7 @@ export const ImageCard = component$(
           placeholder={background}
           style={{
             borderRadius: "10px",
+            border: "1px solid var(--border-v1)",
           }}
         />
       </>

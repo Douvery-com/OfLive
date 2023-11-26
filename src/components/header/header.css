@@ -1,5 +1,6 @@
 nav {
     background-color: var(--background-content);
+    opacity: .90;
     width: 100%;
     max-width: var(--max-width-content);
     height: 90px;
@@ -51,6 +52,6 @@ nav ul li a:hover {
 }
 
 nav ul li .active {
-    color: #009688;
+    color: var(--color-green);
     font-weight: 600;
 }

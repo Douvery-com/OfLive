@@ -1,11 +1,14 @@
-import { component$, useStore, useStylesScoped$ } from "@builder.io/qwik";
+import { $, component$, useStore, useStylesScoped$ } from "@builder.io/qwik";
 import { AvatarSizes } from "~/core/enum/sizes.enum";
 import { UserAvatar } from "../../avatar";
 import style from "./index.css?inline";
-import { IconArrowDown } from "../../icons";
+import { IconArrowDown, IconArrowUp } from "../../icons";
 import { ActionButtonCards } from "./action-card";
 import { ImageCard } from "../../image/image-card";
 import { LayoutOptions, ObjectFitOptions } from "~/core/types/enum";
+import { ActionButtonPostOpen } from "../card-post-open/action-card-open";
+
+import { PostResponse } from "~/components/(POST)/post-response";
 
 export type TypePost = {
   _id: string;
@@ -19,11 +22,18 @@ export default component$(({ post }: { post: TypePost }) => {
   useStylesScoped$(style);
   const state = useStore({
     showMore: false,
+    openPost: false,
   });
   const limitChara = 240;
   const comment = post.content;
   const text = comment;
   const limit = limitChara;
+  const handleOpenPostFast = $(() => {
+    //scrool
+    const element = document.getElementById("post");
+    element?.scrollIntoView({ behavior: "smooth" });
+    state.openPost = !state.openPost;
+  });
 
   return (
     <section>
@@ -34,43 +44,52 @@ export default component$(({ post }: { post: TypePost }) => {
             handleAvartar=""
             size={AvatarSizes.MEDIUM}
           />
-          <IconArrowDown />
+          <button onClick$={handleOpenPostFast}>
+            {state.openPost ? <IconArrowUp /> : <IconArrowDown />}
+          </button>
         </div>
         <div class="card_info">
           <div class="profile_name">
-            <h2>{post.userName}</h2>
+            <h2>
+              <a href={`/${post.user}/`}>{post.userName}</a>
+            </h2>
             <span>{post.user}</span>
           </div>
+
           <div class="card_info_user">
-            <span>
-              <a
-                href={`/post/${post._id}`}
-                dangerouslySetInnerHTML={
-                  state.showMore
-                    ? text
-                    : text.slice(0, limit) + (text.length > limit ? "..." : "")
-                }
-              />
-              {post.imagen !== undefined ? (
-                <div class="section_image">
-                  {post.imagen.map((img, i) => (
-                    <div key={i} class="img">
-                      <ImageCard
-                        layout={LayoutOptions.FullWidth}
-                        objectFit={ObjectFitOptions.Contain}
-                        width={300}
-                        isclass="img-comment"
-                        src={img}
-                        alt="imagen opinion user"
-                      />
-                    </div>
-                  ))}
-                  <br />
-                </div>
-              ) : (
-                ""
-              )}
-            </span>
+            <a href={`/post/${post._id}`} class="card_info_user__date">
+              <span>
+                <span
+                  class="card_info_user__date__content"
+                  dangerouslySetInnerHTML={
+                    state.showMore
+                      ? text
+                      : text.slice(0, limit) +
+                        (text.length > limit ? "..." : "")
+                  }
+                />
+                {post.imagen?.length ? (
+                  <div class="section_image">
+                    {post.imagen.map((img, i) => (
+                      <div key={i} class="img">
+                        <ImageCard
+                          layout={LayoutOptions.Contain}
+                          objectFit={ObjectFitOptions.Cover}
+                          width={500}
+                          height={500}
+                          isclass="img-comment"
+                          src={img}
+                          alt="imagen opinion user"
+                        />
+                      </div>
+                    ))}
+                    <br />
+                  </div>
+                ) : (
+                  ""
+                )}
+              </span>
+            </a>
 
             {post.content.length > 100 && (
               <button
@@ -80,7 +99,15 @@ export default component$(({ post }: { post: TypePost }) => {
                 {state.showMore ? "Ver menos" : "Ver más"}
               </button>
             )}
-            <ActionButtonCards />
+            {state.openPost ? (
+              <>
+                {" "}
+                <ActionButtonPostOpen state={state} />
+                <PostResponse post={post as any} />
+              </>
+            ) : (
+              <ActionButtonCards />
+            )}
           </div>
         </div>
       </div>

@@ -3,10 +3,12 @@ section {
     display: flex;
     flex-direction: column;
     width: 100%;
-    padding: 0 1rem;
+    padding: 1.5rem 0rem 0rem 0rem;
     cursor: pointer;
     background-color: var(--background-content);
     color: var(--text-color-pr);
+    border-top: 1px solid var(--border-v1);
+
 }
 
 section .profile {
@@ -67,9 +69,8 @@ section .card_info .card_info_user span {
     color: var(--text-color-pr);
     line-height: 22px;
     text-wrap: balance;
-    padding: 10px 0;
-}
 
+}
 
 .show_more {
     display: flex;
@@ -98,5 +99,4 @@ section .card_info .card_info_user span {
 
 .section_image .img {
     width: 100%;
-
 }

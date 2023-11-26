@@ -3,6 +3,22 @@ import CardPost from "~/components/use/cards/card-post";
 import style from "./index.css?inline";
 export const post = [
   {
+    _id: "ID_dasf10a1f05asf54saf",
+
+    userAvatar:
+      "https://pbs.twimg.com/profile_images/1641214587851661313/1FTo4uUq_400x400.jpg",
+
+    userName: "virgobaby",
+
+    user: "@maybeeevirgo",
+
+    imagen: [
+      "https://pbs.twimg.com/media/F_0IRo3XoAAe2Pi?format=jpg&name=small",
+    ],
+
+    content: "when someone remembers the smallest littlest details of me:",
+  },
+  {
     _id: "ID_0",
 
     userAvatar: "https://avatars.githubusercontent.com/u/55435898?v=4",

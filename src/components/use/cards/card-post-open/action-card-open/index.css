@@ -1,8 +1,18 @@
+.section_open_buttons {
+    width: 100%;
+    display: flex;
+
+    gap: 20px;
+
+}
+
 .section_action_buttons {
+    width: 100%;
     display: flex;
     justify-content: space-between;
     gap: 20px;
-
+    border-top: 1px solid var(--border-v1);
+    border-bottom: 1px solid var(--border-v1);
 }
 
 .section_action_buttons .action_primary {

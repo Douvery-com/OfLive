@@ -7,6 +7,7 @@ import Header from "~/components/header/header";
 import NavVertical from "~/components/nav-vertical";
 import { type ImageTransformerProps, useImageProvider } from "qwik-image";
 import { modifyCloudinaryUrl } from "~/core/utils/modify-cloudinary-url";
+import ScrollToTop from "~/components/scroll-to-top";
 
 export const onGet: RequestHandler = async ({ cacheControl }) => {
   // Control caching for this request for best performance and to reduce hosting costs:
@@ -54,7 +55,9 @@ export default component$(() => {
         <div class="slot">
           <Slot />
         </div>
-        <article></article>
+        <aside>
+          <ScrollToTop />
+        </aside>
       </div>
     </main>
   );

@@ -1,0 +1,44 @@
+.post_list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+
+
+}
+
+.post_item {
+    display: grid;
+    grid-template-columns: 20px auto;
+    width: 100%;
+    margin-left: 10px;
+
+}
+
+.card_post {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: var(--background-content);
+    padding: 1rem 0rem;
+    border-bottom: 1px solid var(--border-v1);
+
+}
+
+.line_vertical {
+    width: 1px;
+    margin-right: 20px;
+    height: 100%;
+    display: grid;
+    place-content: center;
+    background-color: var(--border-v1);
+    color: var(--color-action-v1);
+    opacity: 0.8;
+
+
+}
+
+.line_vertical:hover {
+    opacity: 1;
+}

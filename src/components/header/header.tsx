@@ -14,7 +14,9 @@ export default component$(() => {
   return (
     <nav>
       <div class="logo">
-        <h1>OfLive</h1>
+        <h1>
+          <a href="/">OfLive</a>
+        </h1>
       </div>
       <ul>
         <li>

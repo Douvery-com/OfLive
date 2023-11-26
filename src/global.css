@@ -16,12 +16,16 @@
 
 /* Custom variables for themes */
 [data-theme="DARK_THEME"] {
+  --color-green: #05a998;
+
+
   --background-content: #070a0c;
   --background-clear: #0e1418;
   --background-footer: #020e08;
   --text-color-pr: #f3f5f7;
 
   --color-action-v1: #f3f5f7;
+  --color-action-arrow: #05a998;
 
 
   --border-v1: #9f9f9f74;
@@ -31,11 +35,14 @@
 
 /* 212a3e */
 [data-theme="LIGHT_THEME"] {
+  --color-green: #009688;
+
   --background-content: #fff;
   --background-clear: #f3f5f7;
   --background-footer: #bcbbbb;
 
   --color-action-v1: #1f2937;
+  --color-action-arrow: #394e6a;
 
 
   --text-color-pr: #191919;

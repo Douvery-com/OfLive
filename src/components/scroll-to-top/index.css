@@ -1,0 +1,25 @@
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    margin-left: 50px;
+    background-color: var(--color-green);
+    border: 1px solid var(--color-green);
+    border-radius: 5px;
+    outline: none;
+    box-sizing: border-box;
+    color: #fff;
+    padding: 10px 30px;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    z-index: 1000;
+
+}
+
+.scroll-to-top:active {
+    transform: scale(.97);
+}
+
+.scroll-to-top.visible {
+    opacity: 1;
+}
