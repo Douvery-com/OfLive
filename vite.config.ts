@@ -8,13 +8,16 @@ export default defineConfig(() => {
     plugins: [qwikCity(), qwikVite(), tsconfigPaths()],
     dev: {
       headers: {
-        "Cache-Control": "public, max-age=0",
+        'Cache-Control': 'public, max-age=0',
       },
     },
     preview: {
       headers: {
-        "Cache-Control": "public, max-age=600",
+        'Cache-Control': 'public, max-age=600',
       },
     },
+    optimizeDeps: {
+      include: [ "@auth/core" ]
+    }
   };
 });

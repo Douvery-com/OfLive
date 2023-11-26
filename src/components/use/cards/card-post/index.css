@@ -1,0 +1,82 @@
+section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 1.5rem 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background-color: var(--background-content);
+    color: var(--text-color-pr);
+    ;
+}
+
+section .profile {
+    width: 100%;
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+section .profile .card_avatar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    justify-content: space-between;
+}
+
+section .profile_name {
+    display: flex;
+    flex-direction: column;
+    gap: 2.2px;
+}
+
+section .profile_name span {
+    opacity: .7;
+}
+
+section .profile_name h2 {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text-color-pr);
+}
+
+section .card_info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+section .card_info .card_info_user {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+
+section .card_info .card_info_user span {
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--text-color-pr);
+    line-height: 22px;
+    text-wrap: balance;
+
+}
+
+.show_more {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 5px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #009688;
+}
+
+.show_more:hover {
+    text-decoration: underline;
+}

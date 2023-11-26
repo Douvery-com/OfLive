@@ -1,3 +1,26 @@
+export function IconArrowDown({
+  size,
+  color,
+}: {
+  size?: number;
+  color?: string;
+}) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={size ?? "20"}
+      height={size ?? "20"}
+      viewBox="0 0 24 24"
+      color={color ?? "#394e6a"}
+    >
+      <path
+        fill="currentColor"
+        d="M16.59 8.59L12 13.17L7.41 8.59L6 10l6 6l6-6l-1.41-1.41z"
+      />
+    </svg>
+  );
+}
+
 export function IconToday({ size }: { size?: number }) {
   return (
     <svg

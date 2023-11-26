@@ -7,7 +7,7 @@ nav {
     align-items: center;
     padding: 50px 0;
     flex-direction: column;
-    border-right: 1px solid var(--border-v2);
+    border-right: 1px solid var(--border-v1);
     position: fixed;
     top: 100px;
     overflow: auto;

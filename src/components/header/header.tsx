@@ -41,7 +41,7 @@ export default component$(() => {
       </ul>
 
       <div>
-        <a href="/login">Login</a>
+        <a href="/auth/login">Login</a>
       </div>
     </nav>
   );

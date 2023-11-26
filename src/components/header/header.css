@@ -9,13 +9,14 @@ nav {
     align-items: center;
     border-bottom: 1px solid var(--border-v1);
     position: fixed;
+    z-index: 999;
 
 }
 
 nav .logo {
     color: var(--text-color-pr);
     font-size: 35px;
-    font-weight: 600;
+    font-weight: 800;
 }
 
 nav ul {
