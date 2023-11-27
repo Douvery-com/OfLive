@@ -12,6 +12,8 @@ export const ImageCard = component$(
     src,
     alt,
     background,
+    radius,
+    border,
   }: {
     layout: LayoutOptions;
     objectFit: ObjectFitOptions;
@@ -22,6 +24,8 @@ export const ImageCard = component$(
     src: string;
     alt: string;
     background?: string;
+    radius?: number;
+    border?: string;
   }) => {
     return (
       <>
@@ -35,8 +39,8 @@ export const ImageCard = component$(
           alt={alt}
           placeholder={background}
           style={{
-            borderRadius: "10px",
-            border: "1px solid var(--border-v1)",
+            borderRadius: `${radius ? radius : 10}px`,
+            border: `${border ? border : "1px solid var(--border-v1)"}`,
           }}
         />
       </>

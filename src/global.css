@@ -22,7 +22,9 @@
   --background-content: #070a0c;
   --background-clear: #0e1418;
   --background-footer: #020e08;
+
   --text-color-pr: #f3f5f7;
+  --text-color-sr: #536471;
 
   --color-action-v1: #f3f5f7;
   --color-action-arrow: #05a998;
@@ -46,6 +48,7 @@
 
 
   --text-color-pr: #191919;
+  --text-color-sr: #536471;
 
   --border-v1: #e5e5e5;
   --border-v2: #e5e5e5;

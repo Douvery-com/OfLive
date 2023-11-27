@@ -35,13 +35,14 @@ export const reflectPreference = (theme: ThemePreference) => {
 };
 
 export const getColorPreference = (): ThemePreference => {
-  return LIGHT_THEME;
+  const preference = localStorage.getItem(themeStorageKey);
+  return preference === DARK_THEME ? DARK_THEME : LIGHT_THEME;
 };
 export const ThemeSelect = component$(() => {
   useStylesScoped$(styles);
   const state = useContext(GlobalTheme);
-
-  const onClick$ = $(() => {
+  console.log(state);
+  const onChange$ = $(() => {
     const initialPreference = getColorPreference();
     setPreference(initialPreference);
 
@@ -50,14 +51,9 @@ export const ThemeSelect = component$(() => {
   });
 
   return (
-    <button
-      style={{
-        color: "var(--text-color-pr)",
-      }}
-      aria-label="Switch theme"
-      onClick$={onClick$}
-    >
-      --
-    </button>
+    <select onChange$={onChange$} value={state.theme} aria-label="Select theme">
+      <option value={LIGHT_THEME}>🌞 Tema claro</option>
+      <option value={DARK_THEME}>🌜 Tema oscuro</option>
+    </select>
   );
 });

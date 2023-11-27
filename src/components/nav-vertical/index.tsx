@@ -50,7 +50,7 @@ export default component$(() => {
       </ul>
       <ul>
         <li class="select_teme">
-          Selecion de tema <ThemeSelect />
+          <ThemeSelect />
         </li>
       </ul>
     </nav>
