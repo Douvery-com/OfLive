@@ -1,11 +1,9 @@
 import { $, component$, useStylesScoped$ } from "@builder.io/qwik";
 import { IconArrowLeft } from "~/components/use/icons";
-import { TypeProfile } from "../card_profile";
 
-export const ProfileHeader = component$(
-  ({ profile }: { profile: TypeProfile }) => {
-    useStylesScoped$(
-      `
+export const ProfileHeader = component$(() => {
+  useStylesScoped$(
+    `
       .section_header_post {
     display: flex;
     justify-content: space-between;
@@ -36,18 +34,17 @@ export const ProfileHeader = component$(
     transform: scale(1.1);
 }
         `,
-    );
-    const handleBack = $(() => {
-      window.history.back();
-    });
-    return (
-      <section class="section_header_post">
-        {" "}
-        <button class="button_go_back" onClick$={handleBack}>
-          <IconArrowLeft />
-          <span>Volver</span>{" "}
-        </button>
-      </section>
-    );
-  },
-);
+  );
+  const handleBack = $(() => {
+    window.history.back();
+  });
+  return (
+    <section class="section_header_post">
+      {" "}
+      <button class="button_go_back" onClick$={handleBack}>
+        <IconArrowLeft />
+        <span>Volver</span>{" "}
+      </button>
+    </section>
+  );
+});

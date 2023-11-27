@@ -2,8 +2,6 @@ import { component$, useStylesScoped$ } from "@builder.io/qwik";
 import style from "./index.css?inline";
 import { ImageCard } from "~/components/use/image/image-card";
 import { LayoutOptions, ObjectFitOptions } from "~/core/types/enum";
-import { UserAvatar } from "~/components/use/avatar";
-import { AvatarSizes } from "~/core/enum/sizes.enum";
 
 export type TypeProfile = {
   _id: string;

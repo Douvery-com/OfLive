@@ -41,7 +41,7 @@ export const getColorPreference = (): ThemePreference => {
 export const ThemeSelect = component$(() => {
   useStylesScoped$(styles);
   const state = useContext(GlobalTheme);
-  console.log(state);
+
   const onChange$ = $(() => {
     const initialPreference = getColorPreference();
     setPreference(initialPreference);

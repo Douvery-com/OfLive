@@ -1,8 +1,11 @@
-import { Profile } from "@auth/core/types";
+import { type Profile } from "@auth/core/types";
 import { component$ } from "@builder.io/qwik";
 import { routeLoader$ } from "@builder.io/qwik-city";
 
-import { CardProfilePage, TypeProfile } from "~/components/(USER)/card_profile";
+import {
+  CardProfilePage,
+  type TypeProfile,
+} from "~/components/(USER)/card_profile";
 import { ProfileHeader } from "~/components/(USER)/header_user";
 
 const profiles: Profile[] = [
@@ -24,17 +27,17 @@ const profiles: Profile[] = [
 export const useProfile = routeLoader$(
   async ({ params }): Promise<TypeProfile | undefined> => {
     const res = profiles.find((profile) => profile.user === params.user);
-    console.log(res);
+
     return res !== undefined ? res : (undefined as any);
   },
 );
 
 export default component$(() => {
   const profile = useProfile().value;
-  console.log(profile);
+
   return (
     <main>
-      <ProfileHeader profile={profile as any} />
+      <ProfileHeader />
       <CardProfilePage profile={profile as any} />
     </main>
   );
