@@ -2,6 +2,8 @@ import { component$, useStylesScoped$ } from "@builder.io/qwik";
 import style from "./index.css?inline";
 import { ImageCard } from "~/components/use/image/image-card";
 import { LayoutOptions, ObjectFitOptions } from "~/core/types/enum";
+import { IconVerified } from "~/components/use/icons";
+import { ButtonsProfile } from "./buttons_profile/buttons_profile";
 
 export type TypeProfile = {
   _id: string;
@@ -47,24 +49,35 @@ export const CardProfilePage = component$(
                 />
               </div>
               <div class="title">
-                <h2>{profile.name}</h2>
+                <div class="name">
+                  <h2>{profile.name}</h2>
+                  {profile.isVerify ? <IconVerified /> : ""}
+                  <ButtonsProfile profile={profile} />
+                </div>
+
                 <span>{profile.user}</span>
+
+                <section class="section_followers">
+                  <ul>
+                    <li>
+                      <span>{profile.followers}</span>
+                      <span>Seguidores</span>
+                    </li>
+                    <li>
+                      <span>{profile.following}</span>
+                      <span>Siguiendo</span>
+                    </li>
+                    <li>
+                      <span>0</span>
+                      <span>Me gusta</span>
+                    </li>
+                  </ul>
+                </section>
               </div>
             </div>
             <div class="title-total">
               <div class="desc">
                 <p>{profile.description}</p>
-              </div>
-              <div class="actions">
-                <button>
-                  <i class="far fa-heart"></i>
-                </button>
-                <button>
-                  <i class="far fa-envelope"></i>
-                </button>
-                <button>
-                  <i class="fas fa-user-friends"></i>
-                </button>
               </div>
             </div>
           </div>

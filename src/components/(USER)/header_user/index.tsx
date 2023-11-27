@@ -1,10 +1,11 @@
 import { $, component$, useStylesScoped$ } from "@builder.io/qwik";
-import { IconArrowLeft } from "~/components/use/icons";
+import { IconArrowLeft, IconShared } from "~/components/use/icons";
 
 export const ProfileHeader = component$(() => {
   useStylesScoped$(
     `
       .section_header_post {
+        position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -33,6 +34,20 @@ export const ProfileHeader = component$(() => {
 .button_go_back:hover {
     transform: scale(1.1);
 }
+
+.shared_button {
+  font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    position: absolute;
+    top: 22px;
+    right: 10px;
+    color: var(--color-action-v1);
+
+
+}
         `,
   );
   const handleBack = $(() => {
@@ -44,6 +59,10 @@ export const ProfileHeader = component$(() => {
       <button class="button_go_back" onClick$={handleBack}>
         <IconArrowLeft />
         <span>Volver</span>{" "}
+      </button>
+      <button class="shared_button">
+        Compartir
+        <IconShared size="20" />
       </button>
     </section>
   );

@@ -23,6 +23,9 @@
   --background-clear: #0e1418;
   --background-footer: #020e08;
 
+  --color-button-follow: #f3f5f7;
+  --color-text-button-follow: #070a0c;
+
   --text-color-pr: #f3f5f7;
   --text-color-sr: #536471;
 
@@ -42,6 +45,9 @@
   --background-content: #fff;
   --background-clear: #f3f5f7;
   --background-footer: #bcbbbb;
+
+  --color-button-follow: #070a0c;
+  --color-text-button-follow: #f3f5f7;
 
   --color-action-v1: #1f2937;
   --color-action-arrow: #394e6a;
