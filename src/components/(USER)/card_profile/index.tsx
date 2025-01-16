@@ -31,7 +31,7 @@ export const CardProfilePage = component$(
                 width={500}
                 height={200}
                 isclass="portada"
-                src={profile.banner}
+                src={profile?.banner}
                 alt="imagen opinion user"
               />
             </div>

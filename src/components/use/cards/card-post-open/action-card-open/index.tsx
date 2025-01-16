@@ -8,9 +8,7 @@ export const ActionButtonPostOpen = component$(({ state }: { state?: any }) => {
   });
   return (
     <section class="section_open_buttons">
-      <button onClick$={handleOpenPostFast}>
-        {state.openPost ? <IconArrowUp /> : <IconArrowDown />}
-      </button>
+       
       <section class="section_action_buttons">
         <div class="action_primary">
           <button>

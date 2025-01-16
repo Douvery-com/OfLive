@@ -47,7 +47,8 @@ nav ul li a svg {
 
 nav ul li a:hover {
     width: 100%;
-    transform: scale(0.9);
+    
+    color: var(--color-green);
 }
 
 .select_teme {

@@ -1,5 +1,4 @@
-import { type Profile } from "@auth/core/types";
-import { component$ } from "@builder.io/qwik";
+ import { component$ } from "@builder.io/qwik";
 import { routeLoader$ } from "@builder.io/qwik-city";
 
 import {
@@ -8,7 +7,7 @@ import {
 } from "~/components/(USER)/card_profile";
 import { ProfileHeader } from "~/components/(USER)/header_user";
 
-const profiles: Profile[] = [
+const profiles: TypeProfile[] = [
   {
     _id: "1FDAS1F32A1",
     user: "@maybeeevirgo",
@@ -38,7 +37,7 @@ export default component$(() => {
   return (
     <main>
       <ProfileHeader />
-      <CardProfilePage profile={profile as any} />
+      <CardProfilePage profile={profile  as any} />
     </main>
   );
 });

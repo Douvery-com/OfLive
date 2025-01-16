@@ -45,19 +45,19 @@ export default component$(() => {
   });
   return (
     <main id="content">
-      <div class="header">
+      
         <Header />
-      </div>
+     
       <div class="layout_init">
         <aside>
           <NavVertical />
         </aside>
         <div class="slot">
+          <div class="contet-slot">
           <Slot />
+         </div>
         </div>
-        <aside>
-          <ScrollToTop />
-        </aside>
+        
       </div>
     </main>
   );
