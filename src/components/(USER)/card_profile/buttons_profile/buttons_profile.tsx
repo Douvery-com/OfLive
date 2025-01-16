@@ -1,8 +1,7 @@
 import { component$, useStylesScoped$ } from "@builder.io/qwik";
 import style from "./buttons_profile.css?inline";
-import { type TypeProfile } from "..";
-export const ButtonsProfile = component$(
-  ({ profile }: { profile: TypeProfile }) => {
+  export const ButtonsProfile = component$(
+  ({ profile }: { profile:  any }) => {
     useStylesScoped$(style);
     profile;
     return (

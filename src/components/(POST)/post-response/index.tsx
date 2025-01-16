@@ -28,20 +28,16 @@ export const PostResponse = component$(({ post }: { post: TypePost }) => {
     ],
   });
   return (
-    <>
-      {" "}
-      <section>
-        <ul class="post_list">
-          {state.reposePostList.map((post, i) => (
-            <li key={i} class="post_item">
-             
-              <div class="card_post">
-                <CardPost post={post} />
-              </div>
-            </li>
-          ))}
-        </ul>
-      </section>
-    </>
+    <section>
+    <ul class="post_list">
+      {state.reposePostList.map((post, i) => (
+        <li key={i} class="post_item">
+          <div class="card_post">
+            <CardPost post={post} />
+          </div>
+        </li>
+      ))}
+    </ul>
+  </section>
   );
 });

@@ -1,11 +1,9 @@
-import { $, component$, useStylesScoped$ } from "@builder.io/qwik";
+import {  component$, useStylesScoped$ } from "@builder.io/qwik";
 import style from "./index.css?inline";
-import { IconArrowDown, IconArrowUp } from "~/components/use/icons";
-export const ActionButtonPostOpen = component$(({ state }: { state?: any }) => {
+ export const ActionButtonPostOpen = component$(({ state }: { state?: any }) => {
   useStylesScoped$(style);
-  const handleOpenPostFast = $(() => {
-    state.openPost = !state.openPost;
-  });
+    console.log(state);
+    
   return (
     <section class="section_open_buttons">
        
